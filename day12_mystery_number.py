@@ -13,7 +13,7 @@ print(art.logo)
 
 print("\nI am thinking of a number from 1 to 100. Dare to guess?")
 num = random.randint(1, 101)
-print(num)
+
 while True:
 	level = input("Choose a level 'easy' or 'hard': ").lower()
 	if level == 'easy':
@@ -30,7 +30,7 @@ game_over = False
 
 
 while attempts > 0 and game_over == False:
-	guess = int(input("Make a guess: "))
+	guess = int(input(f"\nYour have {attempts} attempts left. Make a guess: "))
 	compare(num, guess)
 	attempts -= 1
 	if num == guess:
